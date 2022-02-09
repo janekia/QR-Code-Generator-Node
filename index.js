@@ -4,6 +4,7 @@ const path = require('path')
 const qrcode = require('qrcode')
 const app = express();
 
+const hostname = '0.0.0.0';
 const port = process.env.port || 3000;
 
 
@@ -15,6 +16,7 @@ app.set('views',path.join(__dirname,'view'))
 
 app.get('/',(req, res, next) => {
     res.render('index')
+    res.end('Zeet Node')
 })
 
 app.post('/scan',(req,res,next) => {
