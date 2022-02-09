@@ -16,7 +16,7 @@ app.set('views',path.join(__dirname,'view'))
 
 app.get('/',(req, res, next) => {
     res.render('index')
-    res.end('Zeet Node')
+   
 })
 
 app.post('/scan',(req,res,next) => {
@@ -24,7 +24,7 @@ app.post('/scan',(req,res,next) => {
     console.log(input_text);
     qrcode.toDataURL(input_text,(err,src)=>{
         res.render('scan')
-         res.end('Zeet Node')
+        
     })
 })
 app.listen(port, console.log(`Listening on port ${port}`));
