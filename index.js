@@ -24,6 +24,7 @@ app.post('/scan',(req,res,next) => {
     console.log(input_text);
     qrcode.toDataURL(input_text,(err,src)=>{
         res.render('scan')
+         res.end('Zeet Node')
     })
 })
 app.listen(port, console.log(`Listening on port ${port}`));
