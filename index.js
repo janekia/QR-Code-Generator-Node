@@ -4,7 +4,7 @@ const path = require('path')
 const qrcode = require('qrcode')
 const app = express();
 
-const hostname = '0.0.0.0';
+
 const port = process.env.port || 3000;
 
 
